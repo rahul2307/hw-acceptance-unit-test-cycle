@@ -5,9 +5,11 @@ gem 'rails', '4.2.10'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-# for Heroku deployment - as described in Ap. A of ELLS book
+# for Heroku deployment- as described in Ap. A of ELLS book
+gem 'pg', '~> 0.21'
 group :development, :test do
-  gem 'sqlite3'
+  # gem 'sqlite3'
+  gem 'pg', '~> 0.21'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
@@ -24,7 +26,7 @@ group :test do
   gem 'factory_girl_rails', '~> 4.7'
 end
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.21'
 end
 
 # Gems used only for assets and not required
